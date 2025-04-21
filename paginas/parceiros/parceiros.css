@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Chivo';
+}
+
+:root {
+    --corprimaria: #30545f;
+    --corsecundaria: #207A97;
+    --background: #333333;
+    --font: #F5F5F5;
+    --nav-background: #0A0A0A;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#frase_inicial {
+    padding: 40px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: 'Tapestry';
+}
+
+.logo-itens {
+    gap: 10px;
+    height: 100%;
+    width: auto;
+    display: flex;
+}
+
+.logo-png img {
+    height: 90%;
+}
+
+#Logo {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    font-family: 'Oswaldo';
+}
+
+.cabecario {
+    background: #0A0A0A;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+}
+
+.cabecario-menu {
+    display: none;
+}
+
+.cabecario a {
+    padding-right: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cabecario p {
+    color: #fff;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.list a {
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+.list a:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.burguer-menu {
+    display: none;
+}
+
+.nossos-parceiros {
+    background: var(--background);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt {
+    padding: 20px;
+}
+
+.nossos-parceiros-txt {
+    padding-bottom: 40px;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--font);
+    text-shadow: 2px 2px 5px black;
+}
+
+.txt p {
+    font-size: 1.4rem;
+    color: var(--font);
+    text-shadow: 2px 2px 5px black;
+}
+
+.parceiros-container {
+    display: grid;
+    max-width: 100%;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    gap: 5px;
+}
+
+.div {
+    width: 250px;
+    height: 250px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--corprimaria);
+    opacity: .85;
+}
+
+.div h2 {
+    font-size: 1.4rem;
+}
+
+.div p {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.png {
+    width: 60%;
+    height: auto;
+}
+
+.div:hover {
+    background: var(--corsecundaria);
+}
+
+.items {
+    height: 20vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: #0A0A0A;
+    text-align: center;
+}
+
+.items a {
+    color: #fff;
+}
+
+.items a:hover {
+    text-decoration: none;
+    padding-left: 2px;
+}
+
+.items p {
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color: #fff;
+}
+
+.items ul {
+    display: flex;
+    gap: 20px;
+}
+@media (max-width: 1024px) {
+    .logo-png {
+        display: flex;
+        align-items: center;
+    }
+    .logo-png img {
+        height: 70%;
+    }
+    #Logo strong {
+        font-size: 2rem;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .list {
+        display: none;
+    }
+    li {
+        background: #000;
+    }
+    .burguer-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+    .burguer-menu.active .line2 {
+        opacity: 0;
+    } 
+    .burguer-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+    .burguer-menu {
+        display: block;
+        justify-content: end;
+        background: var(--nav-background);
+    }
+    .burguer-menu div {
+        width: 32px;
+        height: 2px;
+        background: var(--font);
+        margin: 8px;
+        transition: .3s;
+    }
+    .cabecario-menu {
+        padding: 1rem;
+        justify-content: end;
+        background: #000;
+    }
+    .cabecario-menu.active {
+        display: flex;
+    }
+    .nossos-parceiros {
+        height: 75vh;
+        max-width: 100%;
+    }
+    .nossos-parceiros-txt {
+        font-size: 2rem;
+    }
+    .parceiros-container {
+        padding: 0;
+        max-width: 100%;;
+        display: grid;
+        grid-auto-flow: column;
+        overflow-x: auto;
+    }
+    .txt p {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    .cabecario-menu ul {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .cabecario-menu li {
+        background: #000;
+    }
+    .cabecario-menu a {
+        color: var(--font);
+        font-size: 1.3rem;
+        text-decoration: none;
+    }
+    .items a {
+        font-size: .6rem;
+    }
+}
